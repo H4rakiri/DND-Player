@@ -1,0 +1,111 @@
+/* character-sheet.css — аккуратный стиль для листа персонажа Meta Bind */
+
+.character-sheet {
+  /* Общий фон и цвет текста — нейтральные */
+  --character-sheet-bg: var(--background-primary, #232323);
+  --character-sheet-fg: var(--text-normal, #e0e0e0);
+  --character-sheet-border: var(--background-modifier-border, #444);
+  --character-sheet-accent: var(--color-accent-2, #6c7a89);
+  --character-sheet-table-bg: var(--background-secondary, #282828);
+  --character-sheet-table-header: var(--background-secondary-alt, #303030);
+}
+
+.character-sheet {
+  background: var(--character-sheet-bg);
+  color: var(--character-sheet-fg);
+}
+
+/* Настройка ширины input: ограничиваем min-width и max-width для компактности */
+.character-sheet .mb-input input[type="text"],
+.character-sheet .mb-input input[type="number"],
+.character-sheet .mb-input select {
+  min-width: 1em; /* настройка ширины input */
+  max-width: 8em;
+  width: 100%;
+  font-size: 1em;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--character-sheet-border);
+  background: var(--character-sheet-table-bg);
+  color: var(--character-sheet-fg);
+  box-sizing: border-box;
+}
+
+.character-sheet .mb-input input[type="number"] {
+  text-align: center;
+}
+
+/* .mb-input-type-imageSuggester img,
+.mb-input-type-imageSuggester .mb-image-suggester-image img {
+  max-width: 200px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+} */
+
+table tr td:first-child img {
+  max-width: 200px;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.character-sheet .mb-input-type-inlineSelect select {
+  min-width: 4em;
+  max-width: auto;
+}
+
+/* Стилизация таблиц */
+.character-sheet table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--character-sheet-table-bg);
+  margin-bottom: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+.character-sheet th,
+.character-sheet td {
+  border: 1px solid var(--character-sheet-border);
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.character-sheet th {
+  background: var(--character-sheet-table-header);
+  color: var(--character-sheet-fg);
+  font-weight: 600;
+}
+
+/* Скрыть лишние полосы прокрутки у таблиц */
+.character-sheet table {
+  overflow-x: auto;
+}
+
+/* Центрирование таблиц в режиме редактирования (Live Preview и Source Mode) */
+.cm-s-obsidian .character-sheet table,
+.markdown-source-view.mod-cm6 .character-sheet table {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  width: 100%;
+}
+/* Центрирование таблиц в режиме редактирования (CodeMirror/Live Preview) */
+.markdown-source-view.mod-cm6 .character-sheet .cm-table-widget,
+.cm-s-obsidian .character-sheet .cm-table-widget {
+  display: flex;
+  justify-content: center;
+}
+
+.markdown-source-view.mod-cm6 .character-sheet .cm-table-widget table,
+.cm-s-obsidian .character-sheet .cm-table-widget table {
+  max-width: 900px;
+  width: 100%;
+}

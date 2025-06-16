@@ -1,0 +1,16 @@
+{
+  "enabledCssSnippets": [
+    "dst-snippetc",
+    "MCL Multi Column",
+    "character-sheet",
+    "no-strikethrough",
+    "beautiful-dataview",
+    "DnD Style",
+    "spellcard",
+    "Hide Properties in Preview"
+  ],
+  "interfaceFontFamily": "",
+  "baseFontSize": 13,
+  "textFontFamily": "",
+  "baseFontSizeAction": true
+}
