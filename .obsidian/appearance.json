@@ -7,7 +7,8 @@
     "beautiful-dataview",
     "DnD Style",
     "spellcard",
-    "Hide Properties in Preview"
+    "Hide Properties in Preview",
+    "dnd_character_sheet_style"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 13,
